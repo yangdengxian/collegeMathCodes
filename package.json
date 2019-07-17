@@ -1,0 +1,36 @@
+{
+  "name": "collegeMathCodes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangdengxian/collegeMathCodes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangdengxian/collegeMathCodes/issues"
+  },
+  "homepage": "https://github.com/yangdengxian/collegeMathCodes#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-istanbul": "^5.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "install": "^0.13.0",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.2.0",
+    "karma-chrome-launcher": "^3.0.0",
+    "karma-coverage-istanbul-reporter": "^2.0.5",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
+    "webpack": "^4.35.3"
+  }
+}
