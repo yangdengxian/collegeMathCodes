@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.math</groupId>
+  <artifactId>math</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>math</name>
+  <description>math</description>
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  <!-- Environment Settings -->
+  <profiles>
+  	<profile>
+  		<id>jdk</id>
+  		<activation>
+  			<activeByDefault>false</activeByDefault>
+  			<jdk>1.8</jdk>
+  		</activation>
+  		<properties>
+  			<maven.compiler.source>1.8</maven.compiler.source> 
+			<maven.compiler.target>1.8</maven.compiler.target> 
+			<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+  		</properties>
+  		<build>
+  			<defaultGoal>install</defaultGoal>
+  			<directory>${basedir}/target</directory>
+  			<resources>
+  				<resource>
+  					<directory>${basedir}/src/main</directory>
+  					<filtering>false</filtering>
+  					<includes>
+			          <include>**/*.xml</include>
+			        </includes>
+			        <excludes>
+			          <exclude>**/*.properties</exclude>
+			        </excludes>
+  				</resource>
+  			</resources>
+  			<testResources>
+  				<testResource>
+  					<directory>${basedir}/src/test</directory>
+  					<filtering>false</filtering>
+  					<includes>
+			          <include>**/*.xml</include>
+			        </includes>
+			        <excludes>
+			          <exclude>**/*.properties</exclude>
+			        </excludes>
+  				</testResource>
+  			</testResources>
+  		</build>
+  	</profile>
+  </profiles>
+</project>
